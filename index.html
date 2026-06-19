@@ -202,15 +202,49 @@
   footer span { color: var(--accent); }
 
   @media (max-width: 768px) {
-    .hero-inner { flex-direction: column-reverse; text-align: center; gap: 2rem; }
-    .hero-photo { width: 200px; height: 200px; }
-    .hero-desc { margin: 0 auto 2rem; }
-    .hero-btns { justify-content: center; }
-    .hero-stats { justify-content: center; }
-    .about-grid { grid-template-columns: 1fr; }
-    .about-img { max-width: 280px; margin: 0 auto; display: block; }
-    .contact-grid { grid-template-columns: 1fr; }
+    nav { padding: 0 4%; height: 56px; }
+    .nav-logo { font-size: 1rem; }
+    .nav-cta { padding: 0.35rem 0.8rem; font-size: 0.78rem; }
     .nav-links { display: none; }
+
+    .hero { min-height: auto; padding: 5.5rem 6% 2.5rem; }
+    .hero-inner { flex-direction: column-reverse; text-align: center; gap: 1.25rem; }
+    .hero-photo { width: 130px; height: 130px; border-width: 3px; }
+    h1.hero-title { font-size: 1.9rem; margin-bottom: 0.4rem; }
+    .hero-subtitle { font-size: 1rem; margin-bottom: 0.75rem; }
+    .hero-desc { margin: 0 auto 1.25rem; font-size: 0.92rem; }
+    .hero-btns { justify-content: center; gap: 0.6rem; }
+    .btn-primary, .btn-outline { padding: 0.6rem 1.2rem; font-size: 0.88rem; }
+    .hero-stats { justify-content: center; gap: 1.5rem; margin-top: 1.5rem; }
+    .stat-num { font-size: 1.25rem; }
+    .stat-label { font-size: 0.7rem; }
+
+    section { padding: 3rem 6%; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-img { max-width: 220px; margin: 0 auto; display: block; }
+
+    .skills-grid { grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+    .skill-card { padding: 1.1rem; }
+
+    .projects-grid { grid-template-columns: 1fr; gap: 1.1rem; margin-top: 2rem; }
+    .project-top { padding: 1.1rem 1.1rem 0; }
+    .project-bottom { padding: 0.85rem 1.1rem 1.1rem; }
+    .project-emoji { font-size: 1.7rem; margin-bottom: 0.6rem; }
+    .project-card h3 { font-size: 0.98rem; }
+    .project-desc { font-size: 0.84rem; }
+
+    .cert-grid { grid-template-columns: 1fr; gap: 0.85rem; margin-top: 2rem; }
+
+    .contact-grid { grid-template-columns: 1fr; gap: 2rem; margin-top: 2rem; }
+    .contact-form { padding: 1.25rem; border-radius: 16px; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group textarea { height: 100px; }
+  }
+
+  @media (max-width: 420px) {
+    .hero-photo { width: 110px; height: 110px; }
+    h1.hero-title { font-size: 1.6rem; }
+    .hero-stats { gap: 1rem; }
   }
 </style>
 </head>
@@ -248,4 +282,370 @@
       </div>
     </div>
     <div class="hero-img-wrap">
-      <img class="hero-photo" src="data:image/jpeg;base64,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MUAGKADFAnsGKDAMUAWIfuUwH0AFBcdwoNQoAKACgAoAgmHzUAEA+Y0GciegzCgAoAKACg2jsJQUFBnIKDMWgAoATNAC0AFAEM/ag0iRUF3CgLoKBhQAUAFAEcvagCOgVwoC4UDCgCBvvGgBKACgAoAKACgAoAKACgCKbtQBFigAxQAYoAMUAGKAEoAKACgBr/dNAENABQAUAFAEcvagBIvvUAS0AFABQBAfvGgBKACgAoAKACgAoAKDB7kEv3zQIZQAUAFABQAUAVz1NABQAUAFABVR3AQ/dNa3Aq0XAKYBQAUAFABQAUAFABQBC/3jQA2gAoAKCo7hSNbhTABQYvcKBBQAUAFABQAUAV/WgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKAI5vu0AQUAFABQAUAdJ8NP8AkovhX/sK2n/o5aiXwsa3PvqvPNwoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgD4V+Iv/ACUHxR/2FLr/ANHPXVHYDnqYBQA+L7xoAloJlsFBiFABQAUAFABQAUAFABQAUATxAbBQA8DFAC0AFABQAUAFABQAUAFADo/vUAS4HpQAtAAKDdIKAsTQAbTQMkAAoAKACgAoAKAJowCtADsYoAKACgAoAKAJwBjpQAvSgAoAlgH3qAJsUAGKADFABigAxQAUAFAD4vvGgCXFABQAUAFABQAUAFBEth0f3hQZEpHymgaIKDdE6j5RQAuKADFABigAxQAYoAKALKAbRSAXFABigAxQAYoAMDFAnsGBQYBigBaYBQAUFwCg1CgAoAKACgBMUAGKDOQtBmFABQBMoG0cUAMllVFI44pG0diqH3mmUWD90UALGPmoFYkbAUnA4pBYh88Y7UBYrpNFMxG7mmFiwyhYsDkUgsMhl2Ag/rTCwydw4AFBEkQghOaDKzHecDkZpDSYlM6EFABQAokABX1pANEZUknvTM5C4oMwxQNbiY4NBuiD1oAMUAGKADFABigAxQAmBg0AQetABQAUAFABigAxQAYoAMUAGKAIJeHoAjoAKACgBCBg8UAQUAFABQAYoAAAKACgAoAKAID940AJQAUAFABQAUAFABQYPcMD0oEGB6CgCOUAL0oAhoAKACgBMD0oAMD0FAEUgwaAG0AFACH7poAq0AFboApgFABQAUAFABQAUAGKQBigAxQAYoAQj5TQBBTAKACgAoAKACgAoAKADFIAxQBFJ96mAsI60gFkHymmBFQAUAFABQAUAFABQAUAFABQAUAFABQBHN92gCCgAoAKACgDpPhp/wAlF8K/9hW0/wDRy1EvhY1uffVeebhQAUAFABQAUAFABQAUAFABQAUAFABQAUA
+      <img class="hero-photo" src="profile.jpg" alt="Siddharth Patil"/>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div>
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Passionate Developer & Problem Solver</h2>
+        <div class="about-text">
+          <p>I'm a Computer Science student at Savitribai Phule Pune University (graduating May 2027), with hands-on experience building full-stack applications from the ground up.</p>
+          <p>My focus is on backend development with Java and Python — crafting RESTful APIs, setting up authentication systems, integrating databases, and deploying with Docker. I also build responsive, user-friendly frontends using React and vanilla JS.</p>
+          <p>When I'm not coding, I'm sharpening my DSA skills on LeetCode and GeeksforGeeks, contributing to open-source, and exploring new technologies in the cloud and AI space.</p>
+        </div>
+        <div class="tag-list" style="margin-top:1.5rem;">
+          <span class="tag accent">📍 Pune, Maharashtra</span>
+          <span class="tag accent">🎓 B.E. Computer Science (2023–2027)</span>
+          <span class="tag accent">📧 siddharth20online@gmail.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-label">Technical Skills</div>
+    <h2 class="section-title">What I Work With</h2>
+    <p class="section-desc">A broad tech stack spanning backend, frontend, databases, tools, and cloud infrastructure.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-card-icon">☕</div>
+        <h4>Languages</h4>
+        <div class="tag-list">
+          <span class="tag">Java</span>
+          <span class="tag">Python</span>
+          <span class="tag">C/C++</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">SQL</span>
+          <span class="tag">HTML/CSS</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">🧩</div>
+        <h4>Frameworks</h4>
+        <div class="tag-list">
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">React</span>
+          <span class="tag">Flask</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Django</span>
+          <span class="tag">Bootstrap</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">🗄️</div>
+        <h4>Databases</h4>
+        <div class="tag-list">
+          <span class="tag">MySQL</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Redis</span>
+          <span class="tag">H2</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">🛠️</div>
+        <h4>Developer Tools</h4>
+        <div class="tag-list">
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Postman</span>
+          <span class="tag">Swagger</span>
+          <span class="tag">VS Code</span>
+          <span class="tag">Keycloak</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">📚</div>
+        <h4>Libraries & Technologies</h4>
+        <div class="tag-list">
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">RabbitMQ</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Redis Caching</span>
+          <span class="tag">JPA/Hibernate</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">🧠</div>
+        <h4>Problem Solving</h4>
+        <div class="tag-list">
+          <span class="tag accent">300+ LeetCode</span>
+          <span class="tag">Arrays & Strings</span>
+          <span class="tag">Trees & Graphs</span>
+          <span class="tag">Dynamic Programming</span>
+          <span class="tag">Greedy Algorithms</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">Technical Journey</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2024 — PRESENT</div>
+        <div class="timeline-role">Backend Development (Python, Java)</div>
+        <div class="timeline-company">Independent / Project-Based</div>
+        <ul class="timeline-desc">
+          <li>Developed backend applications using Django, FastAPI, and Spring Boot</li>
+          <li>Designed and implemented RESTful APIs for scalable web applications</li>
+          <li>Integrated PostgreSQL databases and performed efficient CRUD operations</li>
+          <li>Built authentication systems and handled request validation and error handling</li>
+          <li>Improved performance through optimized database queries and API design</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-label">Projects</div>
+    <h2 class="section-title">Things I've Built</h2>
+    <p class="section-desc">A collection of full-stack applications ranging from food delivery platforms to AI-powered timetable generators.</p>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-top">
+          <span class="project-emoji">🍕</span>
+          <h3>QuickBite</h3>
+          <div class="project-type">Full-Stack Food Delivery Platform</div>
+          <div class="tag-list" style="margin-bottom:1rem;">
+            <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">HTML/CSS</span><span class="tag">JS</span><span class="tag">Leaflet</span>
+          </div>
+          <div class="project-desc">
+            <ul>
+              <li>Built a food delivery platform for Pune with real-time restaurant discovery, cart, and order tracking</li>
+              <li>Developed REST APIs using Spring Boot with session-based auth (HttpSession) and JPA/Hibernate</li>
+              <li>Integrated interactive maps using Leaflet.js and OpenStreetMap for nearby restaurants & live tracking</li>
+              <li>Designed animated rider movement with multi-stage order status (Confirmed → Delivered)</li>
+              <li>Used real restaurant datasets seeded into an H2 in-memory database</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-bottom">
+          <div class="tag-list"></div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/siddengineer/quick-bite-food-delivery" target="_blank">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <span class="project-emoji">🤖</span>
+          <h3>SchedulAI</h3>
+          <div class="project-type">AI-Powered Timetable Generator</div>
+          <div class="tag-list" style="margin-bottom:1rem;">
+            <span class="tag">Python</span><span class="tag">Django</span><span class="tag">JavaScript</span><span class="tag">Redis</span><span class="tag">Docker</span>
+          </div>
+          <div class="project-desc">
+            <ul>
+              <li>Built a full-stack app to automate timetable generation using a constraint-based scheduling engine</li>
+              <li>Features: faculty workload tracking, leave management, and real-time timetable visualization</li>
+              <li>Implemented export to Excel (openpyxl) and PDF (WeasyPrint) with automated email delivery</li>
+              <li>Designed an interactive analytics dashboard for subject distribution and teacher workload</li>
+              <li>Optimized performance with Redis caching and Dockerized deployment</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-bottom">
+          <div class="tag-list"></div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/siddengineer/SchedulAI" target="_blank">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <span class="project-emoji">🎓</span>
+          <h3>Alumni Job Platform</h3>
+          <div class="project-type">Full-Stack Job Portal</div>
+          <div class="tag-list" style="margin-bottom:1rem;">
+            <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">React</span><span class="tag">MySQL</span><span class="tag">Redis</span><span class="tag">Docker</span>
+          </div>
+          <div class="project-desc">
+            <ul>
+              <li>Developed a full-stack platform connecting alumni and students for job postings and applications</li>
+              <li>Built RESTful backend using Spring Boot with layered architecture and DTO pattern</li>
+              <li>Implemented role-based authentication using Spring Security and JWT</li>
+              <li>Designed job workflow: APPLIED → ACCEPTED → REJECTED</li>
+              <li>Integrated Redis caching to improve API performance; containerized with Docker</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-bottom">
+          <div class="tag-list"></div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/siddengineer/alumni_platform" target="_blank">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <span class="project-emoji">🎬</span>
+          <h3>Cineverse</h3>
+          <div class="project-type">Movie Discovery App</div>
+          <div class="tag-list" style="margin-bottom:1rem;">
+            <span class="tag">JavaScript</span><span class="tag">HTML/CSS</span>
+          </div>
+          <div class="project-desc">
+            <ul>
+              <li>A responsive movie discovery web application</li>
+              <li>Browse, search, and explore movies with a clean modern UI</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-bottom">
+          <div class="tag-list"></div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/siddengineer/Cineverse" target="_blank">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <span class="project-emoji">📚</span>
+          <h3>Library Management System</h3>
+          <div class="project-type">Spring Boot Backend</div>
+          <div class="tag-list" style="margin-bottom:1rem;">
+            <span class="tag">Java</span><span class="tag">Spring Boot</span>
+          </div>
+          <div class="project-desc">
+            <ul>
+              <li>A backend system for managing library operations: books, members, and borrowing records</li>
+              <li>Clean REST API with proper CRUD operations and Spring Boot best practices</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-bottom">
+          <div class="tag-list"></div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/siddengineer/librarymanagement-springboot" target="_blank">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-inner">
+    <div class="section-label">Certifications</div>
+    <h2 class="section-title">Credentials</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-icon">🐳</div>
+        <div>
+          <h4>Docker Certified Associate</h4>
+          <p>Infosys Springboard</p>
+          <div class="cert-year">2025</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🐍</div>
+        <div>
+          <h4>Python Fundamentals Certification</h4>
+          <p>Infosys Springboard</p>
+          <div class="cert-year">2023</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">☁️</div>
+        <div>
+          <h4>Cloud Foundation Certification</h4>
+          <p>EduSkills</p>
+          <div class="cert-year">2025</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🍃</div>
+        <div>
+          <h4>Spring Boot Masterclass</h4>
+          <p>Udemy</p>
+          <div class="cert-year">2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Let's Work Together</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>I'm always open to discussing new opportunities, creative projects, or partnerships. Whether you have a specific project in mind or just want to connect — I'd love to hear from you.</p>
+        <ul class="contact-services">
+          <li>Full-Stack Web Development</li>
+          <li>Backend API Design & Architecture</li>
+          <li>Database Design & Optimization</li>
+          <li>Docker & Cloud Deployment</li>
+          <li>Technical Consulting</li>
+        </ul>
+        <div class="socials">
+          <a class="social-link" href="mailto:siddharth20online@gmail.com" target="_blank">✉️ Email</a>
+          <a class="social-link" href="https://github.com/siddengineer" target="_blank">⚡ GitHub</a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name"/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="your@email.com"/>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell me about your project..."></textarea>
+        </div>
+        <button class="form-submit" onclick="sendEmail()">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Designed & Built by <span>Siddharth Patil</span> · siddengineer · 2026</p>
+</footer>
+
+<script>
+function sendEmail() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  if (!name || !email || !message) { alert('Please fill all fields.'); return; }
+  const subject = encodeURIComponent('Portfolio Contact from ' + name);
+  const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+  window.location.href = 'mailto:siddharth20online@gmail.com?subject=' + subject + '&body=' + body;
+}
+</script>
+</body>
+</html>
